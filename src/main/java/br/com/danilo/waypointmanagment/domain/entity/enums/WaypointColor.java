@@ -1,5 +1,5 @@
 package br.com.danilo.waypointmanagment.domain.entity.enums;
 
-public enum Color {
+public enum WaypointColor {
     GREEN, YELLOW, ORANGE, RED
 }

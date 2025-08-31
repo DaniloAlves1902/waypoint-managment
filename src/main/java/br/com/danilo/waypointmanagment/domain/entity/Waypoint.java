@@ -1,10 +1,8 @@
 package br.com.danilo.waypointmanagment.domain.entity;
 
 import br.com.danilo.waypointmanagment.domain.entity.enums.Color;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import br.com.danilo.waypointmanagment.domain.entity.enums.WaypointColor;
+import lombok.*;
 
 import java.time.OffsetDateTime;
 
@@ -12,6 +10,7 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Waypoint {
     private Long id;
     private String waypointName;
@@ -19,6 +18,6 @@ public class Waypoint {
     private double latitude;
     private double longitude;
     private OffsetDateTime eventDate;
-    private Color waypointColor;
+    private WaypointColor waypointColor;
 
 }

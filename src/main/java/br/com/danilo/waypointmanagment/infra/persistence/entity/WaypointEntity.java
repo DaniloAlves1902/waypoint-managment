@@ -1,13 +1,10 @@
 package br.com.danilo.waypointmanagment.infra.persistence.entity;
 
-import br.com.danilo.waypointmanagment.infra.persistence.entity.enums.Color;
+import br.com.danilo.waypointmanagment.infra.persistence.entity.enums.WaypointColorEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.OffsetDateTime;
 
@@ -17,6 +14,7 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class WaypointEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,5 +34,5 @@ public class WaypointEntity {
     private OffsetDateTime eventDate;
 
     @Enumerated(EnumType.STRING)
-    private Color waypointColor;
+    private WaypointColorEntity waypointWaypointColorEntity;
 }
